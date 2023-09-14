@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "Old English Text";
+    src: url("./old-english-text-mt.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 50%;
+}
+
+body {
+    background-image: url(https://fondosmil.com/fondo/2824.jpg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.periodico {
+    width: 300px;
+    margin: 0 auto;
+    border: 2px solid rgb(27, 27, 27);
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+
+}
+
+.nombre {
+    font-family: "Old English Text";
+    font-size: 1.5 rem;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(8, 8, 8);
+}
+
+.fecha {
+    padding: 2px 0;
+    display: flex;
+    font-family: monospace;
+    font-size: 1.6em;
+    letter-spacing: 1px;
+    align-items: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    justify-content: space-between;
+}
+
+.fecha p:first-child {
+    font-size: 1.5rem;
+}
+
+.titulo {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4em;
+}
+
+.noticia {
+    display: flex;
+    gap: 5px;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .periodico {
+        width: 700px;
+        padding: 25px;
+        margin-top: 20px;
+        width: 700px;
+        padding: 25px;
+        background-color: rgb(248, 248, 248);
+
+    }
+
+    .nombre {
+        font-size: 3rem;
+    }
+
+    .fecha,
+    .fecha p:first-child {
+        font-size: 3rem;
+    }
+
+    .titulo {
+        font-size: 4.2rem;
+    }
+}
+
+.noticia_content {
+    display: flex;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.noticia__izquierda {
+    flex-shrink: 2.5;
+}
+
+.noticia__derecha {
+    flex-shrink: 1;
+}
+
+.noticia__izquierda h2 {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+}
+
+.noticia__izquierda h2 span {
+    margin: 0 15px;
+}
+
+.noticia__izquierda div {
+    display: flex;
+    margin-top: 5px;
+    text-align: justify;
+}
+
+.noticia__izquierda div p:nth-child(1) {
+    margin-right: 10px;
+}
+
+.noticia__derecha {
+    margin-left: 15px;
+}
+
+.noticia__derecha img {
+    position: unset;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.me {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(124, 122, 122);
+}
