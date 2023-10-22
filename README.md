@@ -23,3 +23,13 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, cupiditate!
 <img src="img/reto3.jpeg" alt="Descripción de la imagen" width="350px">
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, cupiditate!
+
+## RETO 4
+<img src="img/reto4.jpeg" alt="Descripción de la imagen" width="350px">
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, cupiditate!
+
+## RETO 5
+<img src="img/reto5.jpeg" alt="Descripción de la imagen" width="350px">
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, cupiditate!
