@@ -146,7 +146,7 @@ body {
 /* Estilo para pantallas grandes (más de 1024px de ancho, generalmente desktops) */
 @media only screen and (min-width: 1025px) {
     .hero-text, .hero-imagen {
-        margin: 0 10%; /* Ajuste del margen al 6% en pantallas grandes */
+        margin: 0 8%; /* Ajuste del margen al 6% en pantallas grandes */
     }
 }
 

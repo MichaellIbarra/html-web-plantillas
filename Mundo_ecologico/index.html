@@ -49,6 +49,7 @@
             transition: 0.4s;
         }
     </style>
+</head>
 
 <body>
     <section id="header">
@@ -281,13 +282,17 @@
         <div style="justify-content: center;" class="pro-container">
 
             <section id="form-details">
-                <form style="padding: 30px 0;" class="formulario" action="">
-                    <input type="text" placeholder="Your Name">
-                    <input type="text" placeholder="E-mail">
-                    <input type="text" placeholder="Subject">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <form style="padding: 30px 0;" class="formulario" action="" onsubmit="return validarFormulario()" valid>
+                    <input type="text" id="nombre" placeholder="Your Name">
+                    <input type="text" id="email" placeholder="E-mail">
+                    <!-- Agrega identificadores a los demás campos -->
+                    <input type="text" id="dni" placeholder="Número de DNI">
+                    <input type="text" id="fechaNacimiento" placeholder="Fecha de nacimiento">
+                    <input type="text" id="codigoPostal" placeholder="Codigo postal">
+                    <textarea id="comentario" name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
                     <button type="submit" class="css-button css-button-arrow css-button-arrow--green">Enviar</button>
                 </form>
+
                 <div style="padding: 50px 0;" class="people">
                     <div>
                         <img src="img/1.png" alt="##">
@@ -336,7 +341,57 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function validarFormulario() {
+            // Obtenemos los valores de los campos
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            var dni = document.getElementById("dni").value;
+            var fechaNacimiento = document.getElementById("fechaNacimiento").value;
+            var codigoPostal = document.getElementById("codigoPostal").value;
+            var comentario = document.getElementById("comentario").value;
 
+            // Verificamos cada campo y mostramos una alerta si no cumple con los criterios
+            if (nombre.trim() === "") {
+                mostrarAlerta("Nombre y Apellido es obligatorio");
+                return false;
+            } else if (email.trim() === "" || !validarFormatoEmail(email)) {
+                mostrarAlerta("Correo electrónico no es válido");
+                return false;
+            } else if (dni.trim().length < 8 || dni.trim().length > 10) {
+                mostrarAlerta("Número de DNI debe tener entre 8 y 10 dígitos");
+                return false;
+            } else if (fechaNacimiento.trim() === "") {
+                mostrarAlerta("Fecha de nacimiento es obligatoria");
+                return false;
+            } else if (codigoPostal.trim() === "") {
+                mostrarAlerta("Codigo postal es obligatorio");
+                return false;
+            } else if (comentario.trim().length > 100) {
+                mostrarAlerta("Limite de mensaje es de 100 caracteres");
+                return false;
+            }
+
+            // Si todos los campos cumplen con los criterios, puedes enviar el formulario aquí
+            // Agrega tu lógica de envío de formulario si es necesario
+            return true;
+        }
+
+        function mostrarAlerta(mensaje) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: mensaje,
+            });
+        }
+
+        function validarFormatoEmail(email) {
+            // Utilizamos una expresión regular para verificar el formato del correo electrónico
+            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+    </script>
 </body>
 
 </html>
