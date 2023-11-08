@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Website</title>
+    <title>Ecológico</title>
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,28 +28,7 @@
             border-radius: 5px;
             border: none;
             background-color: #bbcfa1;
-        }
-
-        .css-button-arrow--green:hover {
-            border-radius: 5px;
-            padding-right: 24px;
-            padding-left: 8px;
-        }
-
-        .css-button-arrow--green:hover:after {
-            opacity: 1;
-            right: 10px;
-        }
-
-        .css-button-arrow--green:after {
-            content: "\00BB";
-            position: absolute;
-            opacity: 0;
-            font-size: 20px;
-            line-height: 40px;
-            top: 0;
-            right: -20px;
-            transition: 0.4s;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -58,22 +40,40 @@
 
             <ul id="navbar">
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="Shop.html">Shop</a></li>
-                <li><a href="Blog.html">Blog</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-                <li><a href="Cart.html" id="lg-bag"><i class="fa-solid fa-bag-shopping fa-xl"
-                            style="color: #430850;"></i></a></li>
+                <li><a href="#lista-productos">Tienda</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+                <li class="submenu">
+                    <img src="img/cart.png" id="img-carrito">
+                    <div id="carrito">
+
+                        <table id="lista-carrito" class="u-full-width">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+
+                        <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                    </div>
+                </li>
+                
                 <a href="#" id="close"><i class="fas fa-times"></i></a>
             </ul>
 
         </div>
         <div id="mobile">
-            <a href="Cart.html"><i class="fa-solid fa-bag-shopping fa-xl" style="color: #ac90b2;"></i></a>
             <i id="bar" class="fas fa-outdent"></i>
         </div>
 
     </section>
+
+
     <sections id="hero">
         <div class="hero-text">
             <h2>Encuentra y Apoya</h2>
@@ -129,16 +129,20 @@
 
         </div>
     </section>
-
-    <section style="background-color: #E3E7F4;" class="product1 section-p1">
-        <h2>Featured Products</h2>
-        <p>Summer collection</p>
+    <section id="banner">
+        <h4>Ecológico</h4>
+        <h2>Hasta el <span>50% descuento</span> - todos nuestros productos</h2>
+        <button class="css-button css-button-arrow css-button-arrow--green">Ver Productos </button>
+    </section>
+    <section id="lista-productos" style="background-color: #E3E7F4;" class="product1 section-p1">
+        <h2>Productos Ecológicos</h2>
+        <p>Mira nuestro poductos que tenemos en Stock</p>
         <div class="pro-container">
             <div class="pro">
-                <img src="img/f1.jpg" alt="">
+                <img src="img/f2.jpg" class="imagen-curso u-full-width">
                 <div class="description">
-                    <span>asidas</span>
-                    <h5>Cartoon Astronaut T-shirt</h5>
+                    <h4>Polo Ecológico</h4>
+                    <p>Matichelo</p>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -146,16 +150,17 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$118.19</h4>
+                    <p class="precio">$15</span></p>
+                    <a href="#" class="u-full-width css-button-arrow--green button input agregar-carrito"
+                        data-id="1">Agregar Al
+                        Carrito</a>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
-
             </div>
             <div class="pro">
-                <img src="img/f2.jpg" alt="">
+                <img src="img/prodcutos.jpg" class="imagen-curso u-full-width">
                 <div class="description">
-                    <span>asidas</span>
-                    <h5>Summer Floral T-shirt</h5>
+                    <h4>Producto 2</h4>
+                    <p>Matichelo</p>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -163,16 +168,17 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78.99</h4>
+                    <p class="precio">$20</span></p>
+                    <a href="#" class="u-full-width css-button-arrow--green button input agregar-carrito"
+                        data-id="2">Agregar Al
+                        Carrito</a>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
-
             </div>
             <div class="pro">
-                <img src="img/f3.jpg" alt="">
+                <img src="/img/nuevo.jpg" class="imagen-curso u-full-width">
                 <div class="description">
-                    <span>asidas</span>
-                    <h5>Cozy Pol T-shirt</h5>
+                    <h4>Producto 3</h4>
+                    <p>Matichelo</p>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -180,104 +186,22 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$139.56</h4>
+                    <p class="precio">$10</span></p>
+                    <a href="#" class="u-full-width css-button-arrow--green button input agregar-carrito"
+                        data-id="3">Agregar Al
+                        Carrito</a>
                 </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
-
             </div>
-            <div class="pro">
-                <img src="img/f4.jpg" alt="">
-                <div class="description">
-                    <span>asidas</span>
-                    <h5> white cool T-shirt</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$88</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
 
-            </div>
-            <div class="pro">
-                <img src="img/f5.jpg" alt="">
-                <div class="description">
-                    <span>asidas</span>
-                    <h5>Autumn T-shirt</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$45</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
 
-            </div>
-            <div class="pro">
-                <img src="img/f6.jpg" alt="">
-                <div class="description">
-                    <span>asidas</span>
-                    <h5>Dope T-shirt</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$231.56</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
-
-            </div>
-            <div class="pro">
-                <img src="img/f7.jpg" alt="">
-                <div class="description">
-                    <span>asidas</span>
-                    <h5>Floral Trouser</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$18</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
-
-            </div>
-            <div class="pro">
-                <img src="img/f8.jpg" alt="">
-                <div class="description">
-                    <span>asidas</span>
-                    <h5>Abstract shirt</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$198.99</h4>
-                </div>
-                <a href="#"><i class="fa-solid fa-cart-shopping" id="cart"></i></a>
-
-            </div>
 
         </div>
     </section>
 
-    <section class="product1 section-p1">
-        <h2>Experiencia en Ecológico</h2>
-        <p>Descubre las ventajas y servicios que hacen de tu experiencia de compra un compromiso sostenible con el
-            planeta.
+
+    <section id="Contacto" class="product1 section-p1">
+        <h2>Conctactar</h2>
+        <p>Puedes rellenar este formulario para contactarnos
         </p>
         <div style="justify-content: center;" class="pro-container">
 
@@ -287,7 +211,7 @@
                     <input type="text" id="email" placeholder="E-mail">
                     <!-- Agrega identificadores a los demás campos -->
                     <input type="text" id="dni" placeholder="Número de DNI">
-                    <input type="text" id="fechaNacimiento" placeholder="Fecha de nacimiento">
+                    <input type="date" id="fechaNacimiento" placeholder="Fecha de nacimiento">
                     <input type="text" id="codigoPostal" placeholder="Codigo postal">
                     <textarea id="comentario" name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
                     <button type="submit" class="css-button css-button-arrow css-button-arrow--green">Enviar</button>
@@ -295,18 +219,18 @@
 
                 <div style="padding: 50px 0;" class="people">
                     <div>
-                        <img src="img/1.png" alt="##">
+                        <img src="https://th.bing.com/th/id/OIP.fqSvfYQB0rQ-6EG_oqvonQHaHa?pid=ImgDet&rs=1" alt="##">
                         <p>
-                            <span>Henry Smith</span> Senior Marketing Manager <br>Phone: +000 123 000 77 88 <br>
+                            <span>Persona 1</span> Senior Marketing Manager <br>Phone: +51 999 999 999 <br>
                             Contact:
                             contact@example.com
                         </p>
 
                     </div>
                     <div>
-                        <img src="img/2.png" alt="##">
+                        <img src="https://th.bing.com/th/id/OIP.fqSvfYQB0rQ-6EG_oqvonQHaHa?pid=ImgDet&rs=1" alt="##">
                         <p>
-                            <span>Loch Gomez</span> Senior Marketing Manager <br>Phone: +000 123 000 77 88 <br> Contact:
+                            <span>Persona 2</span> Senior Marketing Manager <br>Phone: +51 999 999 999 <br> Contact:
                             contact@example.com
                         </p>
 
@@ -340,8 +264,10 @@
             <p>Derechos de autor <strong>Ecológico</strong></p>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
     <script>
         function validarFormulario() {
             // Obtenemos los valores de los campos

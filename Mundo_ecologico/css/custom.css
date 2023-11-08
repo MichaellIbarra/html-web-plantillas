@@ -1,29 +1,4 @@
-html {
-    font-size: 62.5%;
-}
-body {
-    background-color: #f5f3f3
-}
-h1 {
-    text-align: center;
-}
-h2 {
-    font-size: 3rem;
-}
-h4 {
-    font-size: 16px;
-    font-weight: 700;
-}
-header {
-    padding: 20px 0 0 0;
-    background: white;
-    text-align: center;
-}
-@media (min-width: 750px) {
-    header {
-        text-align: left;
-    }
-}
+
 .borrar-curso {
     background-color: red;
     border-radius: 50%;
@@ -70,33 +45,6 @@ ul {
     border-radius: 10px;
     color: white;
 }
-.contenido-hero {
-    margin-top: 80px;
-    color: white;
-}
-.contenido-hero form {
-    position: relative;
-    margin-bottom: 0;
-}
-.contenido-hero form #buscador {
-    height: 50px;
-    margin-bottom: 0;
-}
-.contenido-hero form .submit-buscador {
-    position: absolute;
-    right:0;
-    top:0;
-    height: 100%;
-    padding: 0;
-    display: block;
-    text-indent: -9999px;
-    width: 50px;
-    background-image: url(../img/lupa.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-    border:none;
-}
-
 
 .barra {
     padding: 20px 0;
@@ -141,42 +89,3 @@ ul {
     margin:10px 0;
 }
 
-.card {
-    text-align: center;
-    border: 1px solid #e1e1e1;
-    background: white;
-}
-@media (min-width: 550px) {
-    .card {
-        text-align: left;
-    }
-}
-.info-card  {
-    padding: 10px 20px;
-}
-
-.info-card p, 
-.card h4 {
-    margin-bottom: 5px;
-}
-.info-card .precio {
-    text-decoration: line-through;
-    font-size: 18px;
-    margin-top: 10px;
-}
-.info-card .precio span {
-    font-weight: 700;
-    font-size: 22px;
-}
-
-
-.footer {
-    margin-top: 40px;
-    border-top:1px solid #aaa;;
-    padding-top: 40px;   
-}
-.footer .menu a{
-display: block;
-margin-bottom: 10px;
-text-decoration: none;
-}

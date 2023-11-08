@@ -278,7 +278,7 @@ body {
 
 .product1 .pro .description {
 
-  text-align: start;
+  text-align: center;
   padding: 10px 0;
 }
 
@@ -300,9 +300,9 @@ body {
   color: rgb(243, 181, 25);
 }
 
-.product1 .pro .description h4 {
+.product1 .pro .description p {
   padding-top: 7px;
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 700;
   color: rgb(197, 139, 197);
 }
@@ -326,7 +326,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url("img/b2.jpg");
+  background-image: url("https://th.bing.com/th/id/R.9b2c7b3861783f614c2ee2d5e5585292?rik=2oKgQjo0YEr29w&pid=ImgRaw&r=0");
   width: 100%;
   height: 40vh;
   background-size: cover;
@@ -348,11 +348,6 @@ body {
   color: #ef3636;
 }
 
-#banner button:hover {
-  background-color: #c4a2c4;
-  color: white;
-
-}
 
 #sm-banner {
   display: flex;
@@ -1120,7 +1115,7 @@ footer .copyright {
     }
 
     #banner {
-      height: 35vh;
+      height: 50vh;
     }
 
     #sm-banner .banner-box {
@@ -1211,7 +1206,7 @@ footer .copyright {
     }
 
     #banner {
-      height: 40vh;
+      height: 50vh;
     }
 
     #sm-banner .banner-box {
