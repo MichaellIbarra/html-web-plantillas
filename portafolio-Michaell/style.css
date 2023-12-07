@@ -40,7 +40,7 @@ nav.sticky{
 nav .navbar{
   width: 90%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: auto;
 }
@@ -150,6 +150,7 @@ nav.sticky .menu-btn{
 }
 .home .button{
   margin: 20px 0;
+  text-align: center;
 }
 .home .button button{
   outline: none;
@@ -162,6 +163,7 @@ nav.sticky .menu-btn{
   cursor: pointer;
   border: 2px solid transparent;
   transition: all 0.4s ease;
+  margin-bottom: 5px;
 }
 .home .button button:hover{
   border-color: #d3150f;
@@ -247,6 +249,7 @@ section .button button{
 section .button button:hover{
   border-color: #d3150f;
   background-color: #fff;
+  color: #1c3663;
 }
 
  /* My Skills CSS */
@@ -422,8 +425,8 @@ footer .text span a:hover{
 }
 @media (max-width: 900px) {
   .about .left img{
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 280px;
   }
 }
 
